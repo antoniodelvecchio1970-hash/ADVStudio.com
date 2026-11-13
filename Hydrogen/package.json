@@ -1,0 +1,10 @@
+{
+  "name": "advstudio.com",
+  "version": "2.3.0",
+  "private": true,
+  "description": "Antonio Del Vecchio Portfolio - Swiss Typographic Design & GDPR Compliant",
+  "scripts": {
+    "build:css": "npx tailwindcss@3 -i src/input.css -o style.css --minify",
+    "watch:css": "npx tailwindcss@3 -i src/input.css -o style.css --watch"
+  }
+}

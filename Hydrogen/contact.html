@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Antonio Del Vecchio</title>
+  <meta name="description" content="Contatta Antonio Del Vecchio — Senior Art Director & Brand Designer. Napoli, operativo a livello internazionale.">
+
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Scroll CDN (Technical/Functional only) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- Local Compiled Stylesheet (Privacy by Design - Zero Remote CDNs for styles/fonts) -->
+  <link rel="stylesheet" href="style.css?v=2.4">
+</head>
+
+<body class="bg-[#0E0E0E] text-white antialiased selection:bg-white selection:text-black font-sans">
+
+  <!-- ================= FULLSCREEN EDITORIAL NAVIGATION OVERLAY ================= -->
+  <div id="menu-overlay" class="hidden fixed inset-0 z-50 w-full h-[100dvh] bg-[#070707] flex flex-col justify-between px-6 sm:px-8 lg:px-20 py-6 sm:py-8 overflow-hidden pointer-events-none opacity-0 invisible" aria-hidden="true">
+
+    <!-- Subtle Ambient Architectural Vignette -->
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_80%_15%,rgba(226,160,102,0.05),transparent_70%)]"></div>
+
+    <!-- Top Bar -->
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between z-10 pt-2 relative">
+      <a href="index.html" class="overlay-brand flex items-center space-x-2 text-white hover:opacity-80 transition-opacity" aria-label="Home">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 3L2 21h20L12 3z" />
+        </svg>
+      </a>
+
+      <span class="text-[10px] font-mono tracking-[0.25em] text-neutral-500 uppercase select-none hidden sm:block">
+        INDEX — ARCHIVE 2026
+      </span>
+
+      <button id="menu-overlay-close-btn" aria-label="Close Navigation Menu"
+        class="group flex items-center space-x-3 text-white focus:outline-none cursor-pointer py-2 -mr-2 select-none touch-manipulation">
+        <span class="text-[10px] font-mono tracking-widest text-neutral-400 group-hover:text-white uppercase transition-colors">CHIUDI</span>
+        <div class="w-6 h-6 relative flex items-center justify-center pointer-events-none">
+          <span class="absolute block w-5 h-[1.5px] bg-white rounded-full transform rotate-45 transition-transform duration-300 group-hover:rotate-90"></span>
+          <span class="absolute block w-5 h-[1.5px] bg-white rounded-full transform -rotate-45 transition-transform duration-300 group-hover:-rotate-90"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Center: 4 Architectural Menu Items & Editorial Sidebar -->
+    <div class="w-full max-w-7xl mx-auto flex-1 flex flex-col justify-center py-4 sm:py-8 z-10 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+
+        <nav class="lg:col-span-8 flex flex-col divide-y divide-white/10" id="menu-links-list">
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="index.html#capabilities" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-[#E2A066] transition-colors duration-300">01</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">SERVICES</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Capabilities &amp; Vision</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="works.html" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-[#F5E6D3] transition-colors duration-300">02</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">WORKS</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Selected Archive</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="about.html" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-[#D67A53] transition-colors duration-300">03</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">ABOUT</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Direction since 1992</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="contact.html" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-white transition-colors duration-300">04</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">CONTACT</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Start Collaboration</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+        </nav>
+
+        <aside class="lg:col-span-4 lg:pl-8 flex flex-col justify-between space-y-6 text-xs text-neutral-400 font-mono menu-meta-col pt-2 lg:pt-0">
+          <div class="space-y-1.5">
+            <p class="text-white font-medium tracking-widest uppercase text-[10px]">ART DIRECTION</p>
+            <p class="text-neutral-400 leading-relaxed font-sans text-xs sm:text-sm">
+              Antonio Del Vecchio — Design, Evoluzione, Impatto. Direzione artistica e visione strategica dal 1992.
+            </p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-white font-medium tracking-widest uppercase text-[10px]">CONTATTO DIRETTO</p>
+            <a href="mailto:antoniodelvecchio1970@gmail.com" class="text-neutral-300 hover:text-white transition-colors block text-xs sm:text-sm underline underline-offset-4 decoration-neutral-700 hover:decoration-white break-all">
+              antoniodelvecchio1970@gmail.com
+            </a>
+            <div class="text-xs text-neutral-500 mt-1 font-mono">Napoli — Operativo a livello internazionale</div>
+          </div>
+
+          <div class="space-y-1.5">
+            <p class="text-white font-medium tracking-widest uppercase text-[10px]">SOCIAL &amp; NETWORK</p>
+            <div class="flex space-x-6 text-neutral-300 text-xs">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">INSTAGRAM ↗</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LINKEDIN ↗</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between text-[10px] font-mono tracking-widest text-neutral-500 uppercase border-t border-white/5 pt-4 z-10 relative">
+      <span>NAPOLI — GLOBAL</span>
+      <span>EST. 1992 — © ANTONIO DEL VECCHIO</span>
+    </div>
+  </div>
+
+
+  <!-- ================= FIXED SMART HEADER (DARK) ================= -->
+  <header class="fixed top-0 left-0 w-full z-40 bg-[#0E0E0E]/95 backdrop-blur-sm border-b border-white/10 pointer-events-auto transition-transform duration-300 transform translate-y-0" id="smart-header">
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-8 lg:px-20 py-5">
+      <a href="index.html" aria-label="Home" class="flex items-center space-x-2 text-white hover:opacity-70 transition-opacity">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 3L2 21h20L12 3z" />
+        </svg>
+      </a>
+      <nav class="hidden md:flex items-center space-x-12 text-xs font-semibold tracking-widest uppercase text-white/80">
+        <a href="index.html#capabilities" class="nav-link py-1 hover:text-white transition-colors">SERVICES</a>
+        <a href="works.html" class="nav-link py-1 hover:text-white transition-colors">WORKS</a>
+        <a href="about.html" class="nav-link py-1 hover:text-white transition-colors">ABOUT</a>
+        <a href="contact.html" class="nav-link py-1 text-white border-b border-white">CONTACT</a>
+      </nav>
+      <button id="menu-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" class="menu-toggle-btn text-white focus:outline-none flex flex-col justify-center items-end w-12 h-12 cursor-pointer group relative z-50 select-none touch-manipulation">
+        <span class="menu-bar menu-bar-1 block w-6 h-[1.5px] bg-white rounded-full transition-all duration-300"></span>
+        <span class="menu-bar menu-bar-2 block w-6 h-[1.5px] bg-white rounded-full my-[5px] transition-all duration-300"></span>
+        <span class="menu-bar menu-bar-3 block w-6 h-[1.5px] bg-white rounded-full transition-all duration-300"></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ================= CONTACT MAIN (2-COLUMN ASYMMETRIC EDITORIAL) ================= -->
+  <main class="w-full bg-[#0E0E0E] text-white pt-36 sm:pt-44 pb-24 sm:pb-32">
+    <div class="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start">
+
+        <!-- Left Column: Integral Editorial Headline & Direct Contact Details -->
+        <div class="lg:col-span-5 space-y-12">
+          <div class="space-y-6">
+            <p class="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-400">
+              CONTATTI &amp; NUOVI PROGETTI
+            </p>
+            <h1 class="text-[clamp(36px,5.5vw,68px)] font-light tracking-tight leading-[1.04] text-white">
+              Costruiamo qualcosa di <strong class="font-bold">essenziale.</strong>
+            </h1>
+            <p class="text-[15px] sm:text-[17px] text-neutral-300 leading-relaxed max-w-md">
+              Disponibile per incarichi selezionati di direzione artistica, brand identity, packaging e sistemi digitali.
+            </p>
+          </div>
+
+          <div class="border-t border-white/10 pt-8 space-y-6 text-[14px]">
+            <div>
+              <span class="block text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1.5">SEDE</span>
+              <p class="text-white font-medium">Napoli — Operativo a livello internazionale</p>
+              <p class="text-neutral-400 mt-1">Via O. Fragnito 54, 80131 Napoli (NA), Italy</p>
+            </div>
+
+            <div>
+              <span class="block text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1.5">EMAIL DIRETTA</span>
+              <a href="mailto:antoniodelvecchio1970@gmail.com" class="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors break-all">
+                antoniodelvecchio1970@gmail.com
+              </a>
+            </div>
+
+            <div>
+              <span class="block text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-1.5">DATI FISCALI</span>
+              <p class="text-neutral-300 font-mono text-xs tracking-wider">P. IVA 07004201211</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Essential Accessible Form (mailto:) -->
+        <div class="lg:col-span-7 bg-[#141414] border border-white/10 p-6 sm:p-10 lg:p-12">
+          <h2 class="text-xl sm:text-2xl font-medium tracking-tight text-white mb-2">
+            Invia un brief o una richiesta
+          </h2>
+          <p class="text-sm text-neutral-400 mb-8 leading-relaxed">
+            Compila i campi essenziali: il tuo client di posta si aprirà pronto per l'invio diretto, senza intermediari.
+          </p>
+
+          <form id="mailto-contact-form" novalidate class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="c-name" class="block text-xs font-mono uppercase tracking-wider text-neutral-300 mb-2">
+                  Nome <span aria-hidden="true" class="text-[#E2A066]">*</span>
+                </label>
+                <input type="text" id="c-name" name="name" required autocomplete="name" enterkeyhint="next"
+                  placeholder="Mario Rossi" aria-describedby="c-name-err"
+                  class="contact-input w-full bg-[#0A0A0A] border border-white/15 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors">
+                <p id="c-name-err" class="hidden mt-1.5 text-xs text-[#E2A066]" role="alert">Inserisci il tuo nome.</p>
+              </div>
+
+              <div>
+                <label for="c-email" class="block text-xs font-mono uppercase tracking-wider text-neutral-300 mb-2">
+                  Email <span aria-hidden="true" class="text-[#E2A066]">*</span>
+                </label>
+                <input type="email" id="c-email" name="email" required autocomplete="email" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="next"
+                  placeholder="mario@azienda.it" aria-describedby="c-email-err"
+                  class="contact-input w-full bg-[#0A0A0A] border border-white/15 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors">
+                <p id="c-email-err" class="hidden mt-1.5 text-xs text-[#E2A066]" role="alert">Inserisci un indirizzo email valido.</p>
+              </div>
+            </div>
+
+            <div>
+              <label for="c-scope" class="block text-xs font-mono uppercase tracking-wider text-neutral-300 mb-2">
+                Ambito Progetto
+              </label>
+              <select id="c-scope" name="scope"
+                class="w-full bg-[#0A0A0A] border border-white/15 px-4 py-3.5 text-sm text-white focus:outline-none focus:border-white transition-colors">
+                <option value="Brand Identity & Direzione Artistica">Brand Identity &amp; Direzione Artistica</option>
+                <option value="Packaging Design">Packaging Design</option>
+                <option value="Web & Social System">Web &amp; Social System</option>
+                <option value="Progettazione Editoriale / Outdoor">Progettazione Editoriale / Outdoor</option>
+                <option value="Consulenza Strategica">Consulenza Strategica</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="c-message" class="block text-xs font-mono uppercase tracking-wider text-neutral-300 mb-2">
+                Messaggio <span aria-hidden="true" class="text-[#E2A066]">*</span>
+              </label>
+              <textarea id="c-message" name="message" required rows="5" enterkeyhint="done"
+                placeholder="Descrivi obiettivi, tempistiche o contesto del progetto..." aria-describedby="c-message-err"
+                class="contact-input w-full bg-[#0A0A0A] border border-white/15 px-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-white transition-colors"></textarea>
+              <p id="c-message-err" class="hidden mt-1.5 text-xs text-[#E2A066]" role="alert">Inserisci un messaggio per descrivere la richiesta.</p>
+            </div>
+
+            <div id="mailto-status" aria-live="polite" class="hidden p-3.5 border border-white/20 bg-white/5 text-xs font-mono tracking-wider text-neutral-200"></div>
+
+            <button type="submit"
+              class="w-full bg-white text-black py-4 px-6 font-bold text-xs tracking-[0.2em] uppercase hover:bg-neutral-200 transition-colors flex items-center justify-center gap-3 cursor-pointer">
+              <span>APRI EMAIL DIRETTA</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ================= ARCHITECTURAL 4-COLUMN FOOTER ================= -->
+  <footer id="footer" class="relative z-20 w-full bg-[#0A0A0A] text-white border-t border-white/10 px-6 sm:px-8 lg:px-20 pt-16 sm:pt-20 pb-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-14 border-b border-white/10">
+        <!-- Col 1: Brand -->
+        <div class="space-y-4">
+          <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-white">ANTONIO DEL VECCHIO</h3>
+          <p class="text-[13px] text-neutral-400 leading-relaxed font-normal max-w-xs">
+            Senior Art Director &amp; Graphic Designer. Architetture visive, packaging strutturale e sistemi digitali.
+          </p>
+          <p class="text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-500 pt-1">
+            DESIGN. EVOLUTION. IMPACT.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigazione -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-500">NAVIGAZIONE</h4>
+          <ul class="space-y-2.5 text-[13px] text-neutral-300">
+            <li><a href="index.html" class="hover:text-white transition-colors">Index</a></li>
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="works.html" class="hover:text-white transition-colors">Works</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Capabilities -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-500">CAPABILITIES</h4>
+          <ul class="space-y-2.5 text-[13px] text-neutral-300">
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Identità Visiva</a></li>
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Packaging Design</a></li>
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Web &amp; Social System</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contatti -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-500">CONTATTI</h4>
+          <div class="space-y-2.5 text-[13px] text-neutral-300">
+            <p class="text-neutral-400 leading-relaxed">Via O. Fragnito 54, 80131 Napoli (NA), Italy</p>
+            <p>
+              <a href="mailto:antoniodelvecchio1970@gmail.com" class="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors break-all">
+                antoniodelvecchio1970@gmail.com
+              </a>
+            </p>
+            <div class="flex flex-wrap gap-5 pt-2 text-[11px] font-mono uppercase tracking-[0.15em] text-neutral-400">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Behance</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Legal Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[11px] font-mono tracking-[0.12em] uppercase text-neutral-500">
+        <span>© 2026 ANTONIO DEL VECCHIO — P. IVA 07004201211</span>
+        <a href="policy.html" class="hover:text-white transition-colors">PRIVACY &amp; COOKIE POLICY</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FIXED SQUARE BACK TO TOP BUTTON -->
+  <a href="#" id="back-to-top" aria-label="Torna all'inizio"
+    class="fixed bottom-6 right-6 z-40 w-9 h-9 bg-transparent border-[0.5px] border-white/60 hover:border-white/15 text-white/80 hover:text-white/40 flex flex-col items-center justify-center font-mono text-[9px] tracking-tighter transition-all duration-300 rounded-none backdrop-blur-sm group hidden sm:flex">
+    <span class="text-[9px] leading-none mb-0.5 group-hover:-translate-y-0.5 transition-transform">↑</span>
+    <span class="leading-none">TOP</span>
+  </a>
+
+  <script src="main.js?v=2.9"></script>
+  <script>
+    (function () {
+      const form = document.getElementById('mailto-contact-form');
+      if (!form) return;
+
+      const fields = [
+        { input: document.getElementById('c-name'), err: document.getElementById('c-name-err') },
+        { input: document.getElementById('c-email'), err: document.getElementById('c-email-err') },
+        { input: document.getElementById('c-message'), err: document.getElementById('c-message-err') }
+      ];
+      const scopeEl = document.getElementById('c-scope');
+      const statusEl = document.getElementById('mailto-status');
+
+      function validateField(item) {
+        const valid = item.input.checkValidity() && item.input.value.trim().length > 0;
+        item.input.setAttribute('aria-invalid', valid ? 'false' : 'true');
+        if (valid) {
+          item.err.classList.add('hidden');
+          item.input.classList.remove('border-[#E2A066]');
+        } else {
+          item.err.classList.remove('hidden');
+          item.input.classList.add('border-[#E2A066]');
+        }
+        return valid;
+      }
+
+      fields.forEach(item => {
+        item.input.addEventListener('blur', () => validateField(item));
+        item.input.addEventListener('input', () => {
+          if (item.input.getAttribute('aria-invalid') === 'true') {
+            validateField(item);
+          }
+        });
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let firstInvalid = null;
+        fields.forEach(item => {
+          if (!validateField(item) && !firstInvalid) {
+            firstInvalid = item.input;
+          }
+        });
+
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return;
+        }
+
+        const name = fields[0].input.value.trim();
+        const email = fields[1].input.value.trim();
+        const scope = scopeEl ? scopeEl.value : 'Richiesta';
+        const message = fields[2].input.value.trim();
+
+        const subject = encodeURIComponent(`[ADV Studio] ${scope} — ${name}`);
+        const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nAmbito: ${scope}\n\nMessaggio:\n${message}`);
+        const mailtoUrl = `mailto:antoniodelvecchio1970@gmail.com?subject=${subject}&body=${body}`;
+
+        statusEl.textContent = 'Client di posta aperto. Se non si avvia automaticamente, scrivi a antoniodelvecchio1970@gmail.com.';
+        statusEl.classList.remove('hidden');
+        window.location.href = mailtoUrl;
+      });
+    })();
+  </script>
+</body>
+
+</html>

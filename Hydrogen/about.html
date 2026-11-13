@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Antonio Del Vecchio</title>
+  <meta name="description" content="Antonio Del Vecchio — Senior Art Director & Brand Designer indipendente dal 1992. Identità visiva, packaging e sistemi digitali.">
+
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Scroll CDN (Technical/Functional only) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- Local Compiled Stylesheet (Privacy by Design - Zero Remote CDNs for styles/fonts) -->
+  <link rel="stylesheet" href="style.css?v=2.4">
+</head>
+
+<body class="bg-white text-black antialiased selection:bg-black selection:text-white font-sans">
+
+  <!-- ================= FULLSCREEN EDITORIAL NAVIGATION OVERLAY ================= -->
+  <div id="menu-overlay" class="hidden fixed inset-0 z-50 w-full h-[100dvh] bg-[#070707] flex flex-col justify-between px-6 sm:px-8 lg:px-20 py-6 sm:py-8 overflow-hidden pointer-events-none opacity-0 invisible" aria-hidden="true">
+
+    <!-- Subtle Ambient Architectural Vignette -->
+    <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_80%_15%,rgba(226,160,102,0.05),transparent_70%)]"></div>
+
+    <!-- Top Bar -->
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between z-10 pt-2 relative">
+      <a href="index.html" class="overlay-brand flex items-center space-x-2 text-white hover:opacity-80 transition-opacity" aria-label="Home">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 3L2 21h20L12 3z" />
+        </svg>
+      </a>
+
+      <span class="text-[10px] font-mono tracking-[0.25em] text-neutral-500 uppercase select-none hidden sm:block">
+        INDEX — ARCHIVE 2026
+      </span>
+
+      <button id="menu-overlay-close-btn" aria-label="Close Navigation Menu"
+        class="group flex items-center space-x-3 text-white focus:outline-none cursor-pointer py-2 -mr-2 select-none touch-manipulation">
+        <span class="text-[10px] font-mono tracking-widest text-neutral-400 group-hover:text-white uppercase transition-colors">CHIUDI</span>
+        <div class="w-6 h-6 relative flex items-center justify-center pointer-events-none">
+          <span class="absolute block w-5 h-[1.5px] bg-white rounded-full transform rotate-45 transition-transform duration-300 group-hover:rotate-90"></span>
+          <span class="absolute block w-5 h-[1.5px] bg-white rounded-full transform -rotate-45 transition-transform duration-300 group-hover:-rotate-90"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Center: 4 Architectural Menu Items & Editorial Sidebar -->
+    <div class="w-full max-w-7xl mx-auto flex-1 flex flex-col justify-center py-4 sm:py-8 z-10 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+
+        <nav class="lg:col-span-8 flex flex-col divide-y divide-white/10" id="menu-links-list">
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="index.html#capabilities" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-[#E2A066] transition-colors duration-300">01</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">SERVICES</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Capabilities &amp; Vision</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="works.html" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-[#F5E6D3] transition-colors duration-300">02</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">WORKS</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Selected Archive</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="about.html" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-[#D67A53] transition-colors duration-300">03</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">ABOUT</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Direction since 1992</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu-nav-item py-3 sm:py-5 overflow-hidden">
+            <a href="contact.html" class="menu-link group flex items-baseline justify-between w-full text-left">
+              <div class="flex items-baseline space-x-4 sm:space-x-8">
+                <span class="font-mono text-xs sm:text-sm text-neutral-500 tracking-widest group-hover:text-white transition-colors duration-300">04</span>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight group-hover:translate-x-3 transition-transform duration-300">CONTACT</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="hidden md:inline-block font-mono text-[11px] tracking-widest text-neutral-400 uppercase group-hover:text-white transition-colors duration-300">Start Collaboration</span>
+                <span class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 text-base sm:text-lg">↗</span>
+              </div>
+            </a>
+          </div>
+        </nav>
+
+        <aside class="lg:col-span-4 lg:pl-8 flex flex-col justify-between space-y-6 text-xs text-neutral-400 font-mono menu-meta-col pt-2 lg:pt-0">
+          <div class="space-y-1.5">
+            <p class="text-white font-medium tracking-widest uppercase text-[10px]">ART DIRECTION</p>
+            <p class="text-neutral-400 leading-relaxed font-sans text-xs sm:text-sm">
+              Antonio Del Vecchio — Design, Evoluzione, Impatto. Direzione artistica e visione strategica dal 1992.
+            </p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-white font-medium tracking-widest uppercase text-[10px]">CONTATTO DIRETTO</p>
+            <a href="mailto:antoniodelvecchio1970@gmail.com" class="text-neutral-300 hover:text-white transition-colors block text-xs sm:text-sm underline underline-offset-4 decoration-neutral-700 hover:decoration-white break-all">
+              antoniodelvecchio1970@gmail.com
+            </a>
+            <div class="text-xs text-neutral-500 mt-1 font-mono">Napoli — Operativo a livello internazionale</div>
+          </div>
+
+          <div class="space-y-1.5">
+            <p class="text-white font-medium tracking-widest uppercase text-[10px]">SOCIAL &amp; NETWORK</p>
+            <div class="flex space-x-6 text-neutral-300 text-xs">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">INSTAGRAM ↗</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LINKEDIN ↗</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between text-[10px] font-mono tracking-widest text-neutral-500 uppercase border-t border-white/5 pt-4 z-10 relative">
+      <span>NAPOLI — GLOBAL</span>
+      <span>EST. 1992 — © ANTONIO DEL VECCHIO</span>
+    </div>
+  </div>
+
+
+  <!-- ================= FIXED SMART HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-40 bg-white/95 backdrop-blur-sm border-b border-black/5 pointer-events-auto transition-transform duration-300 transform translate-y-0" id="smart-header">
+    <div class="w-full max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-8 lg:px-20 py-5">
+      <a href="index.html" aria-label="Home" class="flex items-center space-x-2 text-black hover:opacity-70 transition-opacity">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 3L2 21h20L12 3z" />
+        </svg>
+      </a>
+      <nav class="hidden md:flex items-center space-x-12 text-xs font-bold tracking-widest uppercase text-black">
+        <a href="index.html#capabilities" class="nav-link py-1 hover:text-black/60 transition-colors">SERVICES</a>
+        <a href="works.html" class="nav-link py-1 hover:text-black/60 transition-colors">WORKS</a>
+        <a href="about.html" class="nav-link py-1 text-black border-b border-black">ABOUT</a>
+        <a href="contact.html" class="nav-link py-1 hover:text-black/60 transition-colors">CONTACT</a>
+      </nav>
+      <button id="menu-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" class="menu-toggle-btn text-black focus:outline-none flex flex-col justify-center items-end w-12 h-12 cursor-pointer group relative z-50 select-none touch-manipulation">
+        <span class="menu-bar menu-bar-1 block w-6 h-[1.5px] bg-black rounded-full transition-all duration-300"></span>
+        <span class="menu-bar menu-bar-2 block w-6 h-[1.5px] bg-black rounded-full my-[5px] transition-all duration-300"></span>
+        <span class="menu-bar menu-bar-3 block w-6 h-[1.5px] bg-black rounded-full transition-all duration-300"></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ================= ABOUT MAIN CONTENT ================= -->
+  <main id="about-main" class="w-full bg-white text-black pt-36 sm:pt-44 pb-24 sm:pb-32">
+    <div class="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-20">
+
+      <!-- Opening Editorial Statement -->
+      <section class="pb-16 sm:pb-24 border-b border-black/10">
+        <p data-reveal class="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-500 mb-6">
+          SENIOR ART DIRECTOR &amp; BRAND DESIGNER — DAL 1992
+        </p>
+        <h1 data-reveal class="text-[clamp(38px,6.5vw,84px)] font-light tracking-tight leading-[1.02] text-black max-w-5xl mb-10">
+          Oltre trent'anni di direzione creativa tra <strong class="font-bold">identità di marca</strong>, packaging e sistemi digitali.
+        </h1>
+        <p data-reveal class="text-[16px] sm:text-[18px] text-neutral-600 leading-relaxed max-w-[65ch]">
+          Sono Antonio Del Vecchio, Art Director e Brand Designer indipendente. Opero da Napoli a livello internazionale progettando architetture visive essenziali, capaci di orientare il posizionamento dei brand e durare nel tempo.
+        </p>
+      </section>
+
+      <!-- Visione & Metodo -->
+      <section class="py-16 sm:py-24 border-b border-black/10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-4">
+          <h2 data-reveal class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500">
+            01 / Visione &amp; Metodo
+          </h2>
+        </div>
+        <div class="lg:col-span-8 space-y-6 text-[15px] md:text-[17px] leading-relaxed text-neutral-800 max-w-[65ch]">
+          <p data-reveal>
+            Ogni progetto nasce da un'analisi rigorosa del contesto competitivo e della natura del prodotto. Rifiuto la decorazione superflua: la forma visiva è la conseguenza diretta di una gerarchia chiara, di un equilibrio tipografico preciso e di una scelta materica coerente.
+          </p>
+          <p data-reveal class="text-neutral-600">
+            Dalla definizione dell'identità verbale e visiva fino alla supervisione esecutiva su stampa, packaging e interfacce digitali, accompagno aziende, studi e direzioni marketing con un interlocutore unico, diretto e responsabile dell'intero processo creativo.
+          </p>
+        </div>
+      </section>
+
+      <!-- Aree di Competenza -->
+      <section class="py-16 sm:py-24 border-b border-black/10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-4">
+          <h2 data-reveal class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500">
+            02 / Aree di Competenza
+          </h2>
+        </div>
+        <div class="lg:col-span-8">
+          <ul data-reveal class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 gap-y-6 sm:gap-y-8 sm:gap-x-12 text-[15px] md:text-[17px] font-medium text-black">
+            <li class="pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-b border-black/10 sm:pb-4">Direzione Artistica</li>
+            <li class="pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-b border-black/10 sm:pb-4">Brand Identity &amp; Logo Design</li>
+            <li class="pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-b border-black/10 sm:pb-4">Packaging Design</li>
+            <li class="pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-b border-black/10 sm:pb-4">Progettazione Editoriale</li>
+            <li class="pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-b border-black/10 sm:pb-4">Campagne Outdoor &amp; Stampa</li>
+            <li class="pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-b border-black/10 sm:pb-4">UI/UX &amp; Digital Systems</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Milestone 1992–2026 -->
+      <section class="py-16 sm:py-24 border-b border-black/10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-4">
+          <h2 data-reveal class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500">
+            03 / Milestone 1992–2026
+          </h2>
+        </div>
+        <div class="lg:col-span-8 divide-y divide-black/10">
+          <div data-reveal class="py-6 first:pt-0 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline">
+            <span class="sm:col-span-3 font-mono text-xs tracking-widest text-neutral-500">1992 — 2002</span>
+            <p class="sm:col-span-9 text-[15px] md:text-[17px] text-neutral-800 leading-relaxed">
+              Formazione e primi incarichi di direzione artistica editoriale e progettazione grafica per l'industria e la cultura visiva italiana.
+            </p>
+          </div>
+          <div data-reveal class="py-6 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline">
+            <span class="sm:col-span-3 font-mono text-xs tracking-widest text-neutral-500">2003 — 2015</span>
+            <p class="sm:col-span-9 text-[15px] md:text-[17px] text-neutral-800 leading-relaxed">
+              Consolidamento nello sviluppo di brand identity, packaging per la grande distribuzione e il lusso, e campagne outdoor ad alta visibilità.
+            </p>
+          </div>
+          <div data-reveal class="py-6 last:pb-0 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline">
+            <span class="sm:col-span-3 font-mono text-xs tracking-widest text-neutral-500">2016 — 2026</span>
+            <p class="sm:col-span-9 text-[15px] md:text-[17px] text-neutral-800 leading-relaxed">
+              Integrazione tra rigore tipografico svizzero, ecosistemi web contemporanei e workflow generativi AI per la prototipazione e la direzione creativa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mega-Link Contact -->
+      <section class="pt-16 sm:pt-24">
+        <p data-reveal class="text-[11px] font-mono tracking-[0.22em] uppercase text-neutral-500 mb-4">
+          NUOVE COLLABORAZIONI
+        </p>
+        <a data-reveal href="contact.html" class="group inline-flex items-baseline gap-4 sm:gap-6 text-[clamp(44px,8vw,112px)] font-light tracking-tight leading-none text-black hover:text-neutral-600 transition-colors">
+          <span>Contact</span>
+          <span class="inline-block transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">↗</span>
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- ================= ARCHITECTURAL 4-COLUMN FOOTER ================= -->
+  <footer id="footer" class="relative z-20 w-full bg-[#0A0A0A] text-white border-t border-white/10 px-6 sm:px-8 lg:px-20 pt-16 sm:pt-20 pb-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-14 border-b border-white/10">
+        <!-- Col 1: Brand -->
+        <div class="space-y-4">
+          <h3 class="text-xs font-bold uppercase tracking-[0.16em] text-white">ANTONIO DEL VECCHIO</h3>
+          <p class="text-[13px] text-neutral-400 leading-relaxed font-normal max-w-xs">
+            Senior Art Director &amp; Graphic Designer. Architetture visive, packaging strutturale e sistemi digitali.
+          </p>
+          <p class="text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-500 pt-1">
+            DESIGN. EVOLUTION. IMPACT.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigazione -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-500">NAVIGAZIONE</h4>
+          <ul class="space-y-2.5 text-[13px] text-neutral-300">
+            <li><a href="index.html" class="hover:text-white transition-colors">Index</a></li>
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="works.html" class="hover:text-white transition-colors">Works</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Capabilities -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-500">CAPABILITIES</h4>
+          <ul class="space-y-2.5 text-[13px] text-neutral-300">
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Identità Visiva</a></li>
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Packaging Design</a></li>
+            <li><a href="index.html#capabilities" class="hover:text-white transition-colors">Web &amp; Social System</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contatti -->
+        <div class="space-y-4">
+          <h4 class="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-500">CONTATTI</h4>
+          <div class="space-y-2.5 text-[13px] text-neutral-300">
+            <p class="text-neutral-400 leading-relaxed">Via O. Fragnito 54, 80131 Napoli (NA), Italy</p>
+            <p>
+              <a href="mailto:antoniodelvecchio1970@gmail.com" class="text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors break-all">
+                antoniodelvecchio1970@gmail.com
+              </a>
+            </p>
+            <div class="flex flex-wrap gap-5 pt-2 text-[11px] font-mono uppercase tracking-[0.15em] text-neutral-400">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Behance</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Legal Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-[11px] font-mono tracking-[0.12em] uppercase text-neutral-500">
+        <span>© 2026 ANTONIO DEL VECCHIO — P. IVA 07004201211</span>
+        <a href="policy.html" class="hover:text-white transition-colors">PRIVACY &amp; COOKIE POLICY</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FIXED SQUARE BACK TO TOP BUTTON -->
+  <a href="#" id="back-to-top-btn" aria-label="Torna all'inizio"
+    class="fixed bottom-6 right-6 z-40 w-9 h-9 bg-transparent border-[0.5px] border-black/90 hover:border-black/40 text-black/90 hover:text-black/50 flex flex-col items-center justify-center font-mono text-[9px] tracking-tighter transition-all duration-300 rounded-none backdrop-blur-sm group">
+    <span class="text-[9px] leading-none mb-0.5 group-hover:-translate-y-0.5 transition-transform">↑</span>
+    <span class="leading-none">TOP</span>
+  </a>
+
+  <script src="main.js?v=2.9"></script>
+</body>
+
+</html>
